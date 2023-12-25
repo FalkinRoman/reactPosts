@@ -7,7 +7,7 @@ const setctive = ({isActive}) =>  isActive ? "active_link" : " ";
 const Navbar = () => {
     return (
         <header>
-            <NavLink to='/posts' className={setctive}>Главная</NavLink>
+            <NavLink to='/' className={setctive}>Главная</NavLink>
             <NavLink to='/contact' className={setctive}>Контакты</NavLink>
         </header>
     );
