@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 800px;
+}
+
+header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  background-color: aliceblue;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+a {
+  color: #000 ;
+  text-decoration: none;
+  
+}
+
+.active_link {
+  color: teal;
+  cursor: default;
+} 
+
+
+
+.post {
+  display: flex;
+  padding: 15px;
+  border: 2px solid teal;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postId__content strong {
+  font-size: 20px;
+}
+
+.postId__content hr {
+  margin: 10px 0 5px 0;
+  color: grey;
+}
+
+.commentItem {
+  background-color: aliceblue;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.commentItem h4 {
+  color: teal;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.commentItem span {
+  color: grey;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+
+.postId_smallText {
+  font-weight: 200;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.post__btns {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.comment {
+  border: 2px solid teal;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+
+.page_wrapper {
+  margin-top: 30px;
+  display: flex;
+  gap: 5px;
+}
+
+.page {
+  padding: 10px;
+  border: 1px solid teal;
+  cursor: pointer;
+}
+
+.page_current {
+  border: 2px solid orangered;
+  font-weight: bold;
+}
+
+
+/* страница контакты  */
+
+
+.contact {
+  border: 2px solid teal;
+  padding: 15px;
+  margin-top: 30px;
+  justify-content: space-around
+}
+
+.contact h3 {
+  font-weight: 300;
+}
+
+
+
+.contact img {
+  min-width: 50px;
+
+}
+
+.contact span {
+  color: teal;
+}
+
+
+
+
+
+.form_contact button {
+  margin-top: 10px;
+}
+
+
+
+
+/* стили для анимации  */
+.post-enter {
+  opacity: 0;
+}
+
+.post-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.post-exit {
+  opacity: 1;
+}
+
+.post-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+
+
+
+/* Размеры экранов */
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+
+
+  .contact_tel {
+    padding: 0 10px;
+  }
+
+}
+
+
+@media only screen and (max-width: 750px) {
+  img {
+    padding: 5px;
+  }
+
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.flex_start {
+  justify-content: start;
+}
+
+.flex_end {
+  justify-content: end;
+}
+
+
+.mb5 {
+  margin-bottom: 5px;
+}
