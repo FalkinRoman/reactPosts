@@ -74,8 +74,14 @@ const FormContact = () => {
     }
 
     
-
-
+    //Функция для отправки формы
+    function sendForm(e) {
+        e.preventDefault()
+        fetchForm()
+        setName("")
+        setEmail("")
+        setComment("")   
+    }
      
 
 
@@ -83,11 +89,11 @@ const FormContact = () => {
         <form className='form_contact' >
             {(nameDirty && nameError) && <div style={{color: "red"}}>{nameError}</div>}
             <MyInput onChange={e => nameHandler(e)} onBlur={e => blurHandler(e)} value={name}  name="name" type="text" placeholder="Имя" />
-            {(emailDirty && emailError) && <div style={{color: "red"}}>{emailError}</div>}
+            {(emailDirty && emailError) && <div style={{color: "red", marginTop: "10px"}}>{emailError}</div>}
             <MyInput onChange={e => emailHandler(e)} onBlur={e => blurHandler(e)} value={email}  name="email" type="email" placeholder="Email" />
             <MyTextarea value={comment} onChange = {(e)=> setComment(e.target.value)} name="comment" type="text" placeholder="Комментарий" />
             <div className='flex flex_end'>
-                <MyButton onClick={fetchForm} disabled={!validForm} type="submit">Отправить</MyButton>
+                <MyButton onClick={e => sendForm(e)} disabled={!validForm} type="submit">Отправить</MyButton>
             </div>
         </form>
     );
