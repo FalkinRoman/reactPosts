@@ -4,6 +4,7 @@ import MyTextarea from './UI/textarea/MyTextarea';
 import MyButton from './UI/button/MyButton';
 import { FormService } from '../API/FormService';
 import { useFetching } from '../hook/useFetching';
+import MyNotification from './UI/notification/MyNotification';
 
 const FormContact = () => {
 
@@ -13,7 +14,8 @@ const FormContact = () => {
     const [email, setEmail] = useState('') 
     const [emailDirty, setEmailDirty] = useState(false)
     const [emailError, setEmailError] = useState('email не может быть пустым')
-    const [comment, setComment] = useState('') 
+    const [comment, setComment] = useState('')
+    const [notification, setNotification] = useState(false) 
     const [validForm, setValidForm] = useState(false)
     const [fetchForm, FormLoading, formError] = useFetching(async () => {
         const formData = {
@@ -77,6 +79,7 @@ const FormContact = () => {
     //Функция для отправки формы
     function sendForm(e) {
         e.preventDefault()
+        setNotification(true)
         fetchForm()
         setName("")
         setEmail("")
@@ -86,7 +89,13 @@ const FormContact = () => {
 
 
     return (
+        
         <form className='form_contact' >
+            {(notification) && 
+            <div>
+                <MyNotification>Форма успешно отправлена</MyNotification>
+            </div>    
+            }
             {(nameDirty && nameError) && <div style={{color: "red"}}>{nameError}</div>}
             <MyInput onChange={e => nameHandler(e)} onBlur={e => blurHandler(e)} value={name}  name="name" type="text" placeholder="Имя" />
             {(emailDirty && emailError) && <div style={{color: "red", marginTop: "10px"}}>{emailError}</div>}
