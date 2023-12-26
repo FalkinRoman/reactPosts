@@ -78,12 +78,12 @@ const FormContact = () => {
     
     //Функция для отправки формы
     function sendForm(e) {
-        setNotification(true)
         e.preventDefault()
         fetchForm()
         setName("")
         setEmail("")
-        setComment("")   
+        setComment("")
+        setNotification(true)   
     }
      
 
