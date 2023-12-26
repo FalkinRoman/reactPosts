@@ -14,9 +14,9 @@ const Contact = () => {
                     </div>
                     <h3><span>oruzheinypost@gmail.com</span></h3>
                 </div>
-                <img src="img/Location1.svg" />
+                <img src="reactPosts/img/Location1.svg" />
             </div>
-            <div style={{marginTop: 50}}>
+            <div style={{marginTop: 40}}>
                <FormContact />
             </div>
         </div>

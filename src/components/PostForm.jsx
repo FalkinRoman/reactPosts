@@ -31,7 +31,7 @@ function PostForm({create}) {
           type='text' 
           placeholder='Описание поста' 
         />
-        <MyButton style={{marginTop: 10}} onClick={addNewPost} >Создать</MyButton>
+        <MyButton style={{marginTop: 15}} onClick={addNewPost} >Создать</MyButton>
       </form>
      );
 }

@@ -69,7 +69,7 @@ const Posts = () => {
 
       <PostFilter filter={filter} setFilter={setFilter} />
 
-      <MyButton style={{ marginTop: 15 }} onClick={() => setModal(true)}>
+      <MyButton style={{ marginTop: 15, marginBottom: 20, padding: "6px 25px"  }} onClick={() => setModal(true)}>
         Создать пост
       </MyButton>
       {postError &&

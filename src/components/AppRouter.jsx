@@ -10,7 +10,7 @@ const AppRouter = () => {
             {routes.map(route => (
                 <Route key={route.path} path={route.path} element={React.createElement(route.element)} exact={route.exact} />
             ))}
-            <Route path='*' element={<Posts />} />
+            <Route path='*' element={<Posts to="/reactPosts" replace/>} />
         </Routes>
     );
 };

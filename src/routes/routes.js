@@ -5,7 +5,7 @@ import Posts from '../Pages/Posts';
 
 //массив маршрутов
 export const routes = [
-    { path: '/', element: Posts , exact: true },
-    { path: '/posts/:id', element: PostIdPage, exact: true },
+    { path: '/reactPosts', element: Posts , exact: true },
+    { path: 'posts/:id', element: PostIdPage, exact: true },
     { path: '/contact', element: Contact , exact: true },
 ];
